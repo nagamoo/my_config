@@ -7,7 +7,7 @@
 
 
 useradd nagamoto
-yum install vim
+yum install -y vim wget
 
 # root bash
 cat  << EOS > /root/.bashrc 
