@@ -167,3 +167,16 @@ nnoremap p "0p
 EOS
 
 
+
+
+yum -y install ntp
+cp /etc/ntp.conf{,.org}
+sed -i -e "s/server 0.centos.pool.ntp.org iburst/server -4 ntp.nict.jp/" /etc/ntp.conf
+sed -i -e "s/server 1.centos.pool.ntp.org iburst/server -4 ntp1.jst.mfeed.ad.jp/" /etc/ntp.conf
+sed -i -e "s/server 2.centos.pool.ntp.org iburst/server -4 ntp2.jst.mfeed.ad.jp/" /etc/ntp.conf
+sed -i -e "s/server 3.centos.pool.ntp.org iburst/server -4 ntp3.jst.mfeed.ad.jp/" /etc/ntp.conf
+ntpdate ntp.nict.jp
+service ntpd start
+chkconfig ntpd on
+
+
