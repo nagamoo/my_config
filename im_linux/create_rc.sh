@@ -8,6 +8,7 @@
 
 useradd nagamoto
 yum install -y vim wget
+yum update -y
 
 # root bash
 cat  << EOS > /root/.bashrc 
