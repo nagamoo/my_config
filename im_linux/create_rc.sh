@@ -3,6 +3,11 @@
 ##################################################
 ##
 ## 初期設定用
+##
+##
+## curl -ocreate_rc.sh https://raw.githubusercontent.com/nagamoo/my_config/master/im_linux/create_rc.sh
+## chmod 755 create_rc.sh
+## ./create_rc.sh
 
 
 
