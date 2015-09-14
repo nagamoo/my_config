@@ -184,4 +184,5 @@ ntpdate ntp.nict.jp
 service ntpd start
 chkconfig ntpd on
 
-
+cd
+source .bashrc
