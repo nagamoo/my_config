@@ -27,8 +27,8 @@ fi
 # PS1='\033[35m[\w]\n\033[33m\u@\h$\033[0m '
 #PS1="\[\033[31m\]AAA\[\033[0m\]"
 #PS1='\[\033[35m[\w]\n\[\033[33m\u@\h$\[\033[0m '
-PS1="\[\033[31m\][\h:\u@:\w \t]$ \[\033[0m\]"
-
+#PS1="\[\033[31m\][\h:\u@:\w \t]$ \[\033[0m\]"
+PS1="\[\033[31m\][\h:\u@:\w \t]\n\$\[\033[0m\]"
 
 # User specific aliases and functions
 alias pwd='pwd -P'
@@ -91,6 +91,7 @@ fi
 #PS1="\[\033[31m\]AAA\[\033[0m\]"
 #PS1='\[\033[35m[\w]\n\[\033[33m\u@\h$\[\033[0m '
 PS1="\[\033[33m\][\h:\u@:\w \t]$ \[\033[0m\]"
+PS1="\[\033[33m\][\h:\u@:\w \t]\n\$\[\033[0m\]"
 
 
 # User specific aliases and functions
@@ -185,4 +186,4 @@ service ntpd start
 chkconfig ntpd on
 
 cd
-source .bashrc
+source /root/.bashrc
