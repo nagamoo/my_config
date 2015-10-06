@@ -24,11 +24,7 @@ fi
 
 # User specific aliases and functions
 
-# PS1='\033[35m[\w]\n\033[33m\u@\h$\033[0m '
-#PS1="\[\033[31m\]AAA\[\033[0m\]"
-#PS1='\[\033[35m[\w]\n\[\033[33m\u@\h$\[\033[0m '
-#PS1="\[\033[31m\][\h:\u@:\w \t]$ \[\033[0m\]"
-PS1="\[\033[31m\][\h:\u@:\w \t]\n\$\[\033[0m\]"
+PS1='\[\e[1;31m\]\u@\h\[\e[0m\] \[\e[37m\][\t]\[\e[0m\] \[\e[36m\][\w]\[\e[0m\] \n \[\e[31m\]\$\[\e[0m\]'
 
 # User specific aliases and functions
 alias pwd='pwd -P'
@@ -86,12 +82,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-
-# PS1='\033[35m[\w]\n\033[33m\u@\h$\033[0m '
-#PS1="\[\033[31m\]AAA\[\033[0m\]"
-#PS1='\[\033[35m[\w]\n\[\033[33m\u@\h$\[\033[0m '
-PS1="\[\033[33m\][\h:\u@:\w \t]$ \[\033[0m\]"
-PS1="\[\033[33m\][\h:\u@:\w \t]\n\$\[\033[0m\]"
+PS1='\[\e[1;33m\]\u@\h\[\e[0m\] \[\e[37m\][\t]\[\e[0m\] \[\e[36m\][\w]\[\e[0m\] \n \[\e[33m\]\$\[\e[0m\]'
 
 
 # User specific aliases and functions
