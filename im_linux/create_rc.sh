@@ -105,37 +105,6 @@ export HISTTIMEFORMAT
 EOS
 
 cat  << EOS > /home/nagamoto/.vimrc 
-#source global definitions
-if [ -f /etc/bashrc ]; then
-        . /etc/bashrc
-fi
-
-# User specific aliases and functions
-
-# PS1='\033[35m[\w]\n\033[33m\u@\h$\033[0m '
-#PS1="\[\033[31m\]AAA\[\033[0m\]"
-#PS1='\[\033[35m[\w]\n\[\033[33m\u@\h$\[\033[0m '
-PS1="\[\033[33m\][\h:\u@:\w \t]$ \[\033[0m\]"
-
-
-# User specific aliases and functions
-alias pwd='pwd -P'
-alias cd='cd -P'
-alias ll='ls -la'
-alias hh='history'
-
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-# 重複履歴を無視 
-export HISTCONTROL=ignoredups
-export HISTSIZE=10000
-
-# historyに時刻
-HISTTIMEFORMAT='%Y%m%d %T ';
-export HISTTIMEFORMAT
-[debserver2:nagamoto@:~ 17:40:50]$ cat .vimrc
 syntax on
 set encoding=utf-8
 
