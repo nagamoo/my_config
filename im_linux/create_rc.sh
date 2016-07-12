@@ -135,7 +135,9 @@ nnoremap p "0p
 EOS
 
 
-
+#DIR COLOR 書換
+sed -i -e "s/DIR 01;34/DIR 01;35/" /etc/DIR_COLORS
+eval `dircolors /etc/DIR_COLORS -b`
 
 yum -y install ntp
 cp /etc/ntp.conf{,.org}
