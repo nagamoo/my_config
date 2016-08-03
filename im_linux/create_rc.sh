@@ -135,6 +135,15 @@ nnoremap p "0p
 EOS
 
 
+cat  << EOS > /etc/motd 
+ _                       _     _ _      
+(_)      _ __ ___   ___ | |__ (_) | ___ 
+| |_____| '_ \` _ \ / _ \| '_ \| | |/ _ \\
+| |_____| | | | | | (_) | |_) | | |  __/
+|_|     |_| |_| |_|\___/|_.__/|_|_|\___|
+EOS
+
+
 #DIR COLOR 書換
 sed -i -e "s/DIR 01;34/DIR 01;35/" /etc/DIR_COLORS
 eval `dircolors /etc/DIR_COLORS -b`
