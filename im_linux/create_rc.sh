@@ -146,6 +146,8 @@ EOS
 
 #DIR COLOR 書換
 sed -i -e "s/DIR 01;34/DIR 01;35/" /etc/DIR_COLORS
+sed -i -e "s/STICKY_OTHER_WRITABLE 30;42/STICKY_OTHER_WRITABLE 31;42/" /etc/DIR_COLORS
+sed -i -e "s/OTHER_WRITABLE 34;42/OTHER_WRITABLE 33;42/" /etc/DIR_COLORS
 eval `dircolors /etc/DIR_COLORS -b`
 
 yum -y install ntp
