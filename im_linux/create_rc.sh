@@ -72,7 +72,7 @@ if has("autocmd")
   autocmd FileType * let &l:comments=join(filter(split(&l:comments, ','), 'v:val =~ "^[sme]"'), ',')
 endif
 
-nnoremap p "0p
+#nnoremap p "0p
 EOS
 
 # 俺アカウント用
@@ -131,7 +131,7 @@ if has("autocmd")
   autocmd FileType * let &l:comments=join(filter(split(&l:comments, ','), 'v:val =~ "^[sme]"'), ',')
 endif
 
-nnoremap p "0p
+#nnoremap p "0p
 EOS
 
 
