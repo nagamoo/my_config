@@ -71,7 +71,6 @@ colorscheme desert
 autocmd BufWritePre * :%s/\s\+$//ge
 autocmd FileType * let &l:comments=join(filter(split(&l:comments, ','), 'v:val =~ "^[sme]"'), ',')
 
-#nnoremap p "0p
 EOS
 
 # 俺アカウント用
@@ -129,7 +128,6 @@ colorscheme desert
 autocmd BufWritePre * :%s/\s\+$//ge
 autocmd FileType * let &l:comments=join(filter(split(&l:comments, ','), 'v:val =~ "^[sme]"'), ',')
 
-#nnoremap p "0p
 EOS
 
 
