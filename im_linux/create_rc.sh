@@ -16,7 +16,7 @@ yum install -y vim wget
 yum update -y
 
 # root bash
-cat  << EOS > /root/.bashrc 
+cat  << EOS > /root/.bashrc
 # Source global definitions
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
@@ -37,7 +37,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-# 重複履歴を無視 
+# 重複履歴を無視
 export HISTCONTROL=ignoredups
 export HISTSIZE=10000
 
@@ -47,7 +47,7 @@ export HISTTIMEFORMAT
 EOS
 
 # root vim
-cat  << EOS > /root/.vimrc 
+cat  << EOS > /root/.vimrc
 syntax on
 set encoding=utf-8
 
@@ -68,15 +68,14 @@ set paste
 
 colorscheme desert
 
-if has("autocmd")
-  autocmd FileType * let &l:comments=join(filter(split(&l:comments, ','), 'v:val =~ "^[sme]"'), ',')
-endif
+autocmd BufWritePre * :%s/\s\+$//ge
+autocmd FileType * let &l:comments=join(filter(split(&l:comments, ','), 'v:val =~ "^[sme]"'), ',')
 
 #nnoremap p "0p
 EOS
 
 # 俺アカウント用
-cat  << EOS > /home/nagamoto/.bashrc 
+cat  << EOS > /home/nagamoto/.bashrc
 #source global definitions
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
@@ -97,7 +96,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-# 重複履歴を無視 
+# 重複履歴を無視
 export HISTCONTROL=ignoredups
 export HISTSIZE=10000
 
@@ -106,7 +105,7 @@ HISTTIMEFORMAT='%Y%m%d %T ';
 export HISTTIMEFORMAT
 EOS
 
-cat  << EOS > /home/nagamoto/.vimrc 
+cat  << EOS > /home/nagamoto/.vimrc
 syntax on
 set encoding=utf-8
 
@@ -127,17 +126,16 @@ set paste
 
 colorscheme desert
 
-if has("autocmd")
-  autocmd FileType * let &l:comments=join(filter(split(&l:comments, ','), 'v:val =~ "^[sme]"'), ',')
-endif
+autocmd BufWritePre * :%s/\s\+$//ge
+autocmd FileType * let &l:comments=join(filter(split(&l:comments, ','), 'v:val =~ "^[sme]"'), ',')
 
 #nnoremap p "0p
 EOS
 
 
-cat  << EOS > /etc/motd 
- _                       _     _ _      
-(_)      _ __ ___   ___ | |__ (_) | ___ 
+cat  << EOS > /etc/motd
+ _                       _     _ _
+(_)      _ __ ___   ___ | |__ (_) | ___
 | |_____| '_ \` _ \ / _ \| '_ \| | |/ _ \\
 | |_____| | | | | | (_) | |_) | | |  __/
 |_|     |_| |_| |_|\___/|_.__/|_|_|\___|
